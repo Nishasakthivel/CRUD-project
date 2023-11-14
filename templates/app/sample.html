@@ -1,0 +1,37 @@
+<html>
+<head><h1 style='text-align: center;color:blue;font-size: x-large;'>SYSTECH GROUP</h1>
+</head>
+<style>
+	table{
+		border-color:white;border-spacing: 10px;
+	}
+	th{
+		color:blue;
+		border-color:white;
+	}</style>
+<center>
+<body>
+<h2 style='color:red;text-align: center;'>book information</h2>
+<table border='2'>
+<thead>
+	<th>book no</th>
+	<th>bookname</th>
+	<th>year of publication</th>
+	<th>price</th>
+	<th>update</th>
+	<th>delete</th>
+</thead>
+{%for i in b%}
+<tr>
+	<td>{{i.no}}</td>
+	<td>{{i.name}}</td>
+	<td>{{i.year}}</td>
+	<td>{{i.price}}</td>
+	<td><a href='/update/{{i.id}}'>update</a></td>
+	<td><a href='/delete/{{i.id}}'>delete</a></td>
+</tr>
+{% endfor %}
+</table>
+</body>
+</center>
+</html>

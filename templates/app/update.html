@@ -1,0 +1,24 @@
+<html>
+<head><h1 style='text-align: center;color:blue;font-size: x-large;'>systech group</h1></head>
+<style>
+	table{
+		border-color: white;border-spacing: 10px;
+	}
+	th{
+		color:blue;
+		border-color: white;
+	}</style>
+<center>
+<body>
+<h2 style='color:red'>update record</h2>
+<form method='post' style='color:blue'>
+	{%csrf_token%}
+	book no:<input type='text' name='no' value='{{b.no}}'><br>
+	book name:<input type='text' name='name' value='{{b.name}}'><br>
+	year:<input type='text' name='year' value='{{b.year}}'><br>
+	price:<input type='text' name='price' value='{{b.price}}'><br>
+	<input type='submit' value='UPDATE RECORD'>
+</form>
+</body>
+</center>
+</html>
